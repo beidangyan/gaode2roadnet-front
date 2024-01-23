@@ -2,6 +2,8 @@
 
 This template should help get you started developing with Vue 3 in Vite.
 
+高德导航API获取道路经纬度的前端项目，与[后端](https://github.com/beidangyan/gaode2roadnet-webapi)搭配使用。
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
@@ -20,6 +22,15 @@ If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has a
 ## Customize configuration
 
 See [Vite Configuration Reference](https://vitejs.dev/config/).
+
+## Create src/components/static/config.ts
+```
+const Gaode = {
+    GaodeKey: "YOUR_KEY", # 申请到高德JSAPI的KEY
+    securityJsCode: "CODE" # 申请到的安全密钥
+};
+export default Gaode;
+```
 
 ## Project Setup
 

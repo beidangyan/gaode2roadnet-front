@@ -5,12 +5,14 @@
     <link rel="stylesheet" type="text/css" href="./src/assets/index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vite App</title>
+    <script type="module" src="/src/components/static/config.ts">
+    </script>
   </head>
   <body>
     <div id="app"></div>
     <script type="text/javascript">
       window._AMapSecurityConfig = {
-        securityJsCode: "737383a71f2f2fe50b92a2366626b484",
+        securityJsCode: Gaode.securityJsCode,
       };
     </script>
     <script type="module" src="/src/main.ts"></script>
