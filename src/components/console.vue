@@ -53,9 +53,11 @@ async function getRoad() {
     emitter.emit("showRoad");
     if (endButtonState.value) {
         endButtonState.value = false;
+        emitter.emit('touchGetDCoordCancel');
     };
     if (startButtonState.value) {
         startButtonState.value = false;
+        emitter.emit('touchGetOCoordCancel');
     };
 };
 // 选择起点事件
@@ -68,7 +70,7 @@ function startButton() {
         startButtonState.value = true;
         if (endButtonState.value) {
             endButtonState.value = false;
-            emitter.emit('touchGetDCoordCancel')
+            emitter.emit('touchGetDCoordCancel');
         };
     }
 }
@@ -82,7 +84,7 @@ function endButton() {
         endButtonState.value = true;
         if (startButtonState.value) {
             startButtonState.value = false;
-            emitter.emit('touchGetOCoordCancel')
+            emitter.emit('touchGetOCoordCancel');
         };
     }
 }

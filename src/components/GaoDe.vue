@@ -26,7 +26,7 @@ onMounted(() => {
             // 提供展示道路事件并绑定emitter
             emitter.on("showRoad", async function () {
                 let roadData = await axios.get("/api/getRoad/");
-                console.log(roadData.data);
+                // console.log(roadData.data);
                 let pathSet: any[] = [];
                 // 把道路渲染到地图上
                 for (let item of roadData.data) {
@@ -40,7 +40,7 @@ onMounted(() => {
                     pathSet.push(path);
 
                 };
-                console.log(pathSet);
+                // console.log(pathSet);
                 let polyline = new AMap.Polyline({
                     path: pathSet,
                     borderWeight: 2,
